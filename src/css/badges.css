@@ -1,19 +1,163 @@
-.badges-list {
+body {
+  font-family: "Gilroy", sans-serif;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  height: 100vh;
+  background-color: #fff;
+  padding: 20px;
 }
-.badges-link {
-  display: block;
-  padding: 8px 16px;
-  border: 1px solid;
-  border-radius: 8px;
-  transition: 200ms ease-in;
+
+.about-section {
+  display: flex;
+  gap: 20px;
+  max-width: 1280px;
+  flex-wrap: wrap;
 }
-.badges-link:hover,
-.badges-link:focus {
-  transform: scale(1.06);
-  color: #747bff;
+
+.about-content {
+  flex: 1;
+  border-radius: 30px;
+  max-width: 580px;
+  background-color: #f3f3f3;
+  padding: 80px 60px;
+}
+
+.about-content h2 {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 92%;
+  letter-spacing: -0.02em;
+  color: #0c0c0c;
+  padding-bottom: 40px;
+}
+
+.about-content p {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.02em;
+  color: rgba(12, 12, 12, 0.7);
+  text-align: justify;
+}
+
+.about-content a {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  text-align: center;
+  color: #fbfbfb;
+  display: inline-block;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  width: 160px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #3350e9;
+  border-radius: 16px;
+  text-decoration: none;
+}
+.about-content a:hover {
+  background-color: #1f3cd4;
+}
+
+.about-content p + p {
+  margin-top: 20px;
+}
+
+.about-image {
+  flex: 1;
+  width: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/about_us.jpg);
+  padding: 188px 0;
+  height: 600px;
+  overflow: hidden;
+}
+
+@media (min-resolution: 192dpi) {
+  .section-one {
+      height: auto;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/about_us@2x.jpg);
+  }
+}
+
+/*----------------MOBILE----------------------*/
+
+@media (max-width: 767px) {
+  .about-section {
+      flex-direction: column;
+      padding: 0px 32px;
+      max-width: 100%;
+  }
+
+  .about-content,
+  .about-image {
+      width: 100%;
+      border-radius: 20px;
+      padding: 15px;
+      height: auto;
+  }
+  .about-image {
+      min-height: 446px;
+  }
+
+  .about-content h2 {
+      font-size: 32px;
+      line-height: 100%;
+      padding-bottom: 28px;
+  }
+
+  .about-content p {
+      font-size: 14px;
+  }
+
+  .about-content a {
+      margin-left: 0;
+  }
+  .about-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 30px;
+  }
+}
+
+/*----------------TABLET----------------------*/
+
+@media (min-width: 768px) and (max-width: 1157px) {
+  .about-section {
+      flex-direction: column;
+      min-width: 800px;
+      max-width: 100%;
+      height: auto;
+      padding: 40px 20px;
+  }
+
+  .about-content,
+  .about-image {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .about-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50px;
+  }
 }
